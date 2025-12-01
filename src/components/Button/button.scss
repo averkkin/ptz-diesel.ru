@@ -1,0 +1,72 @@
+@use '../../styles/helpers' as *;
+
+.btn {
+  @include fluid-text(20, 12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: fluid(28, 16);
+  background: var(--linear-red-primary);
+  border-radius: var(--border-radius-m);
+  height: fluid(113, 92);
+  width: 100%;
+  color: var(--color-white);
+  font-weight: 700;
+  transition: var(--transition-duration);
+  box-shadow: inset 0px 4px 34px #ffffff80;
+
+  @include hover {
+    color: var(--color-white);
+    box-shadow: inset 0px 4px 34px #ffffff50;
+  }
+
+  & img {
+    width: fluid(24, 16);
+    height: fluid(24, 16);
+  }
+
+  @include mobile {
+    border-radius: var(--border-radius-mobile-m);
+  }
+
+  &--small {
+    @include fluid-text(20, 14);
+    height: fluid(48, 38);
+    font-weight: 400;
+    border-radius: var(--border-radius-s);
+
+    @include mobile {
+      border-radius: var(--border-radius-mobile-s);
+    }
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &--white {
+    background: var(--color-white);
+    color: var(--color-black-85);
+
+    @include hover {
+      background: var(--color-black-10);
+    }
+  }
+
+  &--no-shadow {
+    box-shadow: none;
+  }
+
+  &--more {
+    width: fit-content;
+    opacity: 0.6;
+    text-decoration: underline;
+    text-align: left;
+    justify-content: flex-start;
+
+    @include hover {
+      opacity: 1;
+    }
+  }
+}

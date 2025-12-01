@@ -1,0 +1,61 @@
+@use '../../styles/helpers' as *;
+
+.header {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(20);
+  background-color: var(--color-black-85);
+  height: fluid(168, 95);
+  color: var(--color-white);
+
+  @include mobile-s {
+    gap: 0;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: fluid(67, 20);
+
+    & img {
+      width: fluid(113, 54);
+      height: fluid(113, 54);
+    }
+  }
+
+  &__menu ul {
+    display: flex;
+    gap: fluid(79, 5);
+
+    & li a {
+      @include fluid-text(26, 10);
+      font-weight: 300;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__btn {
+
+    @include mobile-s {
+      max-width: rem(145);
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: fluid(11, 7);
+    max-width: rem(244);
+  }
+
+  &__phone {
+    @include fluid-text(26, 14);
+    font-weight: 400;
+  }
+
+}

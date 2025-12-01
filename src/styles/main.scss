@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@use './helpers' as *;
+@use './normalize.scss';
+@use './fonts.scss';
+@use './variables.scss';
+@use './utils.scss';
+@use './globals.scss';
+
+//components
+@use '../components/Header/header.scss';
+@use '../components/Button/button.scss';
+@use '../components/BurgerMenu/burger-menu.scss';
+@use '../components/Search/search.scss';
+@use '../components/Form/form.scss';
+@use '../components/MultiForm/multi-form.scss';
+
+//blocks
+@use '../blocks/AutoPartsHero/auto-parts-hero.scss';
+@use '../blocks/Catalog/catalog.scss';
+@use '../blocks/Callback/callback.scss';

@@ -1,0 +1,50 @@
+@use './helpers' as *;
+@use './utils.scss';
+
+:root {
+  --color-white: #FFFFFF;
+  --color-light: #F3F3F3;
+
+  --color-red: #CE0005;
+
+  --color-black: #151515;
+  --color-black-95: #2C2C2C;
+  --color-black-90: #222222;
+  --color-black-85: #303030;
+  --color-black-80: #4A4949;
+  --color-black-60: #676767;
+  --color-black-50: #7F7F7F;
+  --color-black-40: #A6A6A6;
+  --color-black-30: #C1C1C1;
+  --color-black-20: #CDCDCD;
+  --color-black-10: #EEEEEE;
+
+  --linear-red-primary: linear-gradient(90deg, #B5191C 0%, #DF0E14 51%, #B5191C 100% );
+  --linear-red-secondary: linear-gradient(90deg, #B61500 0%, #DF0F15 100% );
+
+  --border: var(--border-width-s) solid var(--color-black-30);
+
+  --border-radius-l: 20px;
+  --border-radius-m: 10px;
+  --border-radius-s: 7px;
+
+  --border-radius-mobile-l: 8px;
+  --border-radius-mobile-m: 6px;
+  --border-radius-mobile-s: 4px;
+
+
+  --font-family-base: 'Inter', sans-serif;
+  --font-family-title: 'HeadingNowTrial', sans-serif;
+
+  --container-width: #{fluid-to-laptop(
+    $container-desktop-width,
+    $container-laptop-width
+  )};
+  --container-padding-x: 40px;
+  --container-padding-x-mobile: 16px;
+
+  --section-padding-y: #{fluid(150, 60)};
+
+  --transition-duration: 0.2s;
+  --transition-duration-longer: 0.4s;
+}

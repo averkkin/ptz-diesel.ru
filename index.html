@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/src/styles/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+<header class="header container">
+    <div class="header__nav">
+        <img src="/src/assets/images/logo.png" alt="" width="113"
+             height="113" class="logo__img">
+        <nav class="header__menu hidden-mobile">
+            <ul>
+                <li><a href="">каталог товаров</a></li>
+                <li><a href="">доставка и оплата </a></li>
+                <li><a href="">контакты</a></li>
+                <li><a href="">о нас</a></li>
+                <li><a href="">корзина</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header__contact">
+        <a href="tel:+7(8142)33-10-33" class="header__phone">+7 (8142) 33-10-33</a>
+        <button class="btn btn--small btn--white header__btn">позвонить</button>
+    </div>
+    <div class="header__burger burger-menu">
+        <span></span><span></span><span></span>
+    </div>
+</header>
+
+<main class="content">
+
+    <section class="container hero hero--auto-parts">
+
+        <div class="hero__title visible-mobile">
+            <span>Автозапчасти</span>
+            <span>для дизельных автомобилей</span>
+        </div>
+
+        <div class="hero__motor">
+            <img src="/src/assets/images/motor.png" alt="motor" width="772"
+                 height="772" class="hero__motor-img">
+            <img src="/src/assets/icons/garantia.svg" alt="Star" width="221"
+                 height="221" class="hero__garantia">
+        </div>
+        <div class="hero__content">
+            <div class="hero__title hidden-mobile">
+                <span>Автозапчасти</span>
+                <span>для дизельных автомобилей</span>
+            </div>
+            <div class="hero__items">
+                <div class="hero__item">
+                    <img src="/src/assets/icons/hexagon-check.svg" alt="hexagon">
+                    <p>Широкий ассортимент оригинальных и&nbsp;аналоговых деталей для&nbsp;вашего дизеля.</p>
+                </div>
+                <span class="hero__hr"></span>
+                <div class="hero__item">
+                    <img src="/src/assets/icons/truck.svg" alt="truck" width="24" height="24">
+                    <p>Оптом и в розницу, с&nbsp;доставкой в&nbsp;любую точку России.</p>
+                </div>
+            </div>
+            <a href="#popup:callback" class="btn btn--uppercase"><span>подобрать запчасть</span><img
+                    src="/src/assets/icons/turbo.png"
+                    alt="turbo"></a>
+        </div>
+    </section>
+
+    <section class="container catalog catalog--show-more">
+
+        <div class="catalog__content">
+
+            <h2 class="h2 catalog__title">
+                Каталог товаров
+            </h2>
+
+            <form class="search catalog__search" action="#" method="POST">
+                <div class="search__input-group catalog__input-group">
+                    <label for="search"></label>
+                    <input type="search" id="search" class="form__input form__input--light form__input--text search__input" placeholder="VIN, название или артикул">
+                </div>
+                <button type="submit" class="btn btn--no-shadow">Найти</button>
+            </form>
+
+            <div class="catalog__items">
+                <div class="catalog__item">
+                    <h3 class="h3 catalog__h3">Дизельная топливная аппаратура</h3>
+                    <div class="catalog__subcategories">
+                        <p>Форсунки новые</p>
+                        <p>Форсунки восстановленные</p>
+                        <p>ТНВД новые</p>
+                        <p>ТНВД восстановленные</p>
+                        <p>ТННД (топливный насос низкого давления)</p>
+                        <p>Ремкомплекты форсунок</p>
+                    </div>
+                    <button class="catalog__btn-more btn--more" type="button">Посмотреть все</button>
+                </div>
+                <div class="catalog__item">
+                    <h3 class="h3 catalog__h3">Турбокомпрессоры</h3>
+                    <div class="catalog__subcategories">
+                        <p>Турбины новые</p>
+                        <p>Турбины восстановленные</p>
+                        <p>Актуаторы турбокомпрессоров</p>
+                        <p>Картриджи турбокомпрессоров</p>
+                        <p>Геометрии турбокомпрессоров</p>
+                        <p>Вестгейты турбокомпрессоров</p>
+                    </div>
+                    <button class="catalog__btn-more btn--more" type="button">Посмотреть все</button>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="" class="btn btn--uppercase catalog__btn">
+            <span>Смотреть полный каталог</span>
+            <img src="/src/assets/icons/list.svg" alt="list">
+        </a>
+
+    </section>
+
+    <section class="callback">
+        <div class="callback--inner container">
+            <div class="callback__content">
+                <div class="callback__heading">
+                    <h2 class="h2 callback__title">Нужна помощь в&nbsp;подборе запчасти?</h2>
+                    <p class="callback__subtitle">Не нужно разбираться в производителях и складах — наши специалисты сделают это за вас. Подберём нужную запчасть и сообщим, когда она будет у вас. Без дополнительных платежей.</p>
+                </div>
+                <img src="./src/assets/images/iphone.png" alt="Iphone" class="callback__img-phone" width="993" height="797">
+                <img src="./src/assets/images/message.svg" alt="Message" class="callback__img-message" width="476" height="147">
+            </div>
+
+            <form id="multiForm" class="multi-form">
+
+                <div class="multi-form__heading">
+                    <h4 class="h4">Чтобы подобрать запчать с&nbsp;нашим специалистом, заполните форму.</h4>
+                    <p>Мы свяжемся с вами в течении 30 минут в&nbsp;любом удобном для вас мессенджере.</p>
+                </div>
+
+                <!-- ШАГ 1 -->
+                <div class="multi-form__forms form-step active" data-step="1">
+                    <input type="text" name="marka" placeholder="Марка авто">
+                    <input type="text" name="model" placeholder="Модель авто">
+                    <input type="text" name="vin" placeholder="VIN код">
+                    <input type="text" name="detail" placeholder="Название детали">
+                </div>
+
+                <!-- ШАГ 2 -->
+                <div class="multi-form__forms form-step" data-step="2">
+                    <input type="text" name="phone" placeholder="Номер телефона">
+                    <input type="email" name="email" placeholder="Email">
+
+                    <select name="messenger multi-form__messenger" >
+                        <option value="Telegram">Telegram</option>
+                        <option value="WhatsApp">WhatsApp</option>
+                    </select>
+
+                    <label class="checkbox multi-form__checkbox" >
+                        <input type="checkbox" name="policy" required>
+                        Я ознакомлен с политикой конфиденциальности
+                    </label>
+                </div>
+
+                <!-- НАВИГАЦИЯ -->
+                <div class="multi-form__nav form-nav">
+                    <button type="button" id="nextBtn" class="btn btn-next btn--uppercase">ДАЛЕЕ</button>
+                    <button type="submit" id="submitBtn" class="btn btn--uppercase btn-submit hidden">
+                        ПОДОБРАТЬ ЗАПЧАСТЬ
+                    </button>
+
+                    <div class="dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+
+</main>
+<script src="/src/main.js" type="module"></script>
+</body>
+</html>

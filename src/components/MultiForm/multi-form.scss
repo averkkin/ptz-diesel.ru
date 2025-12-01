@@ -1,0 +1,117 @@
+@use '../../styles/helpers' as *;
+
+.multi-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #4A4949;
+  border-radius: var(--border-radius-l);
+  padding-block: fluid(58, 31);
+  padding-inline: fluid(80, 36);
+  gap: fluid(25, 18);
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: fluid(22, 12);
+    text-align: center;
+    & h4 {
+      color: var(--color-white);
+    }
+    & p {
+      @include fluid-text(25, 14);
+      font-weight: 400;
+      opacity: 0.8;
+    }
+  }
+
+  &__forms {
+    display: flex;
+    flex-direction: column;
+    gap: fluid(15, 6);
+
+    & input {
+      @include fluid-text(28, 12);
+
+      font-weight: 400;
+      color: var(--color-white);
+      height: fluid(92, 41);
+      background-color: #7F7F7F;
+      border-radius: var(--border-radius-m);
+      padding-inline: fluid(32, 14);
+
+      @include mobile {
+        border-radius: var(--border-radius-s);
+      }
+    }
+  }
+
+  &__messenger {
+    @include fluid-text(28, 12);
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+
+    font-weight: 400;
+    color: var(--color-white);
+    height: fluid(92, 41);
+    background-color: #7F7F7F;
+    border-radius: var(--border-radius-m);
+    padding-inline: fluid(32, 14);
+
+    @include mobile {
+      border-radius: var(--border-radius-s);
+    }
+  }
+
+  &__nav {
+
+    & .dots {
+      display: flex;
+      gap: fluid(15, 7);
+      max-width: rem(140);
+      margin-inline: auto;
+      margin-top: fluid(35, 15);
+
+      & .dot {
+        height: 2px;
+        border-radius: 50px;
+        background-color: var(--color-white);
+        opacity: 0.2;
+        width: 100%;
+        transition: var(--transition-duration);
+
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+
+    & button {
+      margin-top: fluid(87, 49);
+    }
+  }
+}
+
+.form-step {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(20px);
+  transition: all .35s ease;
+  position: absolute;
+  width: 100%;
+}
+
+.form-step.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
