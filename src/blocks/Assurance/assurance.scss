@@ -1,0 +1,121 @@
+@use '../../styles/helpers' as *;
+
+.assurance {
+  display: flex;
+  flex-direction: column;
+  gap: fluid(57, 14);
+
+  &__title {
+    @include fluid-text(95, 55);
+    text-align: center;
+    width: 100%;
+
+    & span {
+      background: var(--linear-red-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      /* Для новых браузеров */
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: fluid(38, 12);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: fluid(27, 12);
+    border-radius: var(--border-radius-l);
+    min-height: fluid(429, 241);
+    height: fit-content;
+    background-color: var(--color-black-80);
+    overflow: hidden;
+    padding: fluid(48, 18);
+    position: relative;
+    z-index: 1;
+
+    @include mobile {
+      border-radius: var(--border-radius-m);
+    }
+
+    &--red {
+      background: linear-gradient(45deg, #CE0005 0%, #FA3C41 70%, #CE0005 130% );
+    }
+
+    & h3 {
+      color: var(--color-white);
+      font-weight: 600;
+      z-index: 3;
+    }
+
+    & p {
+      @include fluid-text(26, 14);
+      color: var(--color-white);
+      font-weight: 400;
+      max-width: fluid(547, 210);
+      z-index: 3;
+    }
+
+    & img {
+      position: absolute;
+      width: auto;
+      z-index: 2;
+    }
+
+  }
+
+  &__img-docs {
+    height: fluid(488, 180);
+    bottom: -110px;
+    right: -80px;
+
+    @include mobile {
+      bottom: -55çpx;
+      right: -40px;
+    }
+
+  }
+
+  &__img-cargo {
+    height: fluid(349, 140);
+    bottom: -60px;
+    right: -80px;
+
+    @include mobile {
+      bottom: -10px;
+      right: -40px;
+    }
+  }
+
+  &__img-map {
+    height: fluid(461, 180);
+    bottom: -40px;
+    right: -20px;
+
+    @include mobile {
+      bottom: 0;
+      right: -20px;
+    }
+  }
+
+  &__img-pods {
+    height: fluid(450, 180);
+    bottom: -70px;
+    right: -50px;
+
+    @include mobile {
+      bottom: -40px;
+      right: -30px;
+    }
+  }
+}

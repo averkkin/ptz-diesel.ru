@@ -566,19 +566,31 @@ a[class] {
   }
 }
 .multi-form__messenger {
+  width: 100%;
+  height: clamp(2.5625rem, 1.75rem + 3.3333333333vw, 5.75rem);
+}
+.multi-form__messenger select {
   font-size: clamp(0.75rem, 0.4950980392rem + 1.045751634vw, 1.75rem);
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  outline: none;
+}
+.multi-form__messenger select:focus {
+  outline: none;
+  box-shadow: none;
+}
+.multi-form__messenger select {
   font-weight: 400;
   color: var(--color-white);
-  height: clamp(2.5625rem, 1.75rem + 3.3333333333vw, 5.75rem);
+  height: inherit;
+  width: inherit;
   background-color: #7F7F7F;
   border-radius: var(--border-radius-m);
   padding-inline: clamp(0.875rem, 0.5882352941rem + 1.1764705882vw, 2rem);
 }
 @media (width <= 767px) {
-  .multi-form__messenger {
+  .multi-form__messenger select {
     border-radius: var(--border-radius-s);
   }
 }
@@ -601,7 +613,18 @@ a[class] {
   opacity: 1;
 }
 .multi-form__nav button {
-  margin-top: clamp(3.0625rem, 2.4571078431rem + 2.4836601307vw, 5.4375rem);
+  margin-top: clamp(1.25rem, 0.1825980392rem + 4.3790849673vw, 5.4375rem);
+  height: clamp(4.0625rem, 3.1384803922rem + 3.7908496732vw, 7.6875rem);
+}
+.multi-form__checkbox {
+  display: flex;
+  gap: clamp(0.375rem, 0.2316176471rem + 0.5882352941vw, 0.9375rem);
+  align-items: flex-start;
+}
+.multi-form__checkbox input {
+  margin-top: 0.1875rem;
+  width: clamp(0.625rem, 0.4178921569rem + 0.8496732026vw, 1.4375rem);
+  height: clamp(0.625rem, 0.4178921569rem + 0.8496732026vw, 1.4375rem);
 }
 
 .form-step {
@@ -825,17 +848,36 @@ a[class] {
 }
 
 .callback {
-  height: clamp(70.9375rem, 70.9215686275rem + 0.0653594771vw, 71rem);
+  height: clamp(31.25rem, 21.1176470588rem + 41.568627451vw, 71rem);
   background: linear-gradient(145deg, #303030 0%, #282828 100%);
   color: var(--color-white);
   overflow: hidden;
   position: relative;
   padding-block: clamp(1.25rem, 0.0232843137rem + 5.0326797386vw, 6.0625rem);
 }
+@media (width <= 1023px) {
+  .callback {
+    height: fit-content;
+  }
+  .callback .multi-form {
+    margin-top: 25rem;
+  }
+}
+@media (width <= 767px) {
+  .callback .multi-form {
+    margin-top: 21.875rem;
+  }
+}
 .callback--inner {
   display: flex;
   justify-content: space-between;
   height: 100%;
+  gap: 1.875rem;
+}
+@media (width <= 1023px) {
+  .callback--inner {
+    flex-direction: column;
+  }
 }
 .callback__content {
   width: 100%;
@@ -871,9 +913,17 @@ a[class] {
   width: clamp(30.75rem, 22.7683823529rem + 32.7450980392vw, 62.0625rem);
   height: clamp(24.6875rem, 18.2830882353rem + 26.2745098039vw, 49.8125rem);
 }
-@media (width <= 767px) {
+@media (width <= 1023px) {
   .callback__img-phone {
-    top: 45%;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 1.0625rem;
+  }
+}
+@media (width <= 480px) {
+  .callback__img-phone {
+    top: 37%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 1.0625rem;
@@ -883,15 +933,127 @@ a[class] {
   position: absolute;
   bottom: 20%;
   left: 25%;
-  width: clamp(30.75rem, 31.0049019608rem + -1.045751634vw, 29.75rem);
-  height: clamp(5.8125rem, 2.881127451rem + 12.0261437908vw, 17.3125rem);
+  height: clamp(3.125rem, 1.5318627451rem + 6.5359477124vw, 9.375rem);
+  width: auto;
+}
+@media (width <= 1023px) {
+  .callback__img-message {
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    margin-top: 1.0625rem;
+  }
+}
+
+.assurance {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.875rem, 0.1899509804rem + 2.8104575163vw, 3.5625rem);
+}
+.assurance__title {
+  font-size: clamp(3.4375rem, 2.800245098rem + 2.614379085vw, 5.9375rem);
+  text-align: center;
+  width: 100%;
+}
+.assurance__title span {
+  background: var(--linear-red-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Для новых браузеров */
+  background-clip: text;
+  color: transparent;
+}
+.assurance__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(0.75rem, 0.3357843137rem + 1.6993464052vw, 2.375rem);
 }
 @media (width <= 767px) {
-  .callback__img-message {
-    position: relative;
+  .assurance__items {
+    grid-template-columns: 1fr;
+  }
+}
+.assurance__item {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 0.5110294118rem + 0.9803921569vw, 1.6875rem);
+  border-radius: var(--border-radius-l);
+  min-height: clamp(15.0625rem, 12.0674019608rem + 12.2875816993vw, 26.8125rem);
+  height: fit-content;
+  background-color: var(--color-black-80);
+  overflow: hidden;
+  padding: clamp(1.125rem, 0.6470588235rem + 1.9607843137vw, 3rem);
+  position: relative;
+  z-index: 1;
+}
+@media (width <= 767px) {
+  .assurance__item {
+    border-radius: var(--border-radius-m);
+  }
+}
+.assurance__item--red {
+  background: linear-gradient(45deg, #CE0005 0%, #FA3C41 70%, #CE0005 130%);
+}
+.assurance__item h3 {
+  color: var(--color-white);
+  font-weight: 600;
+  z-index: 3;
+}
+.assurance__item p {
+  font-size: clamp(0.875rem, 0.6838235294rem + 0.7843137255vw, 1.625rem);
+  color: var(--color-white);
+  font-weight: 400;
+  max-width: clamp(13.125rem, 7.756127451rem + 22.0261437908vw, 34.1875rem);
+  z-index: 3;
+}
+.assurance__item img {
+  position: absolute;
+  width: auto;
+  z-index: 2;
+}
+.assurance__img-docs {
+  height: clamp(11.25rem, 6.3431372549rem + 20.1307189542vw, 30.5rem);
+  bottom: -110px;
+  right: -80px;
+}
+@media (width <= 767px) {
+  .assurance__img-docs {
+    bottom: -55çpx;
+    right: -40px;
+  }
+}
+.assurance__img-cargo {
+  height: clamp(8.75rem, 5.4203431373rem + 13.660130719vw, 21.8125rem);
+  bottom: -60px;
+  right: -80px;
+}
+@media (width <= 767px) {
+  .assurance__img-cargo {
+    bottom: -10px;
+    right: -40px;
+  }
+}
+.assurance__img-map {
+  height: clamp(11.25rem, 6.7732843137rem + 18.3660130719vw, 28.8125rem);
+  bottom: -40px;
+  right: -20px;
+}
+@media (width <= 767px) {
+  .assurance__img-map {
     bottom: 0;
-    left: -100px;
-    margin-top: 1.0625rem;
+    right: -20px;
+  }
+}
+.assurance__img-pods {
+  height: clamp(11.25rem, 6.9485294118rem + 17.6470588235vw, 28.125rem);
+  bottom: -70px;
+  right: -50px;
+}
+@media (width <= 767px) {
+  .assurance__img-pods {
+    bottom: -40px;
+    right: -30px;
   }
 }
 

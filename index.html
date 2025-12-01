@@ -49,6 +49,7 @@
             <img src="/src/assets/icons/garantia.svg" alt="Star" width="221"
                  height="221" class="hero__garantia">
         </div>
+
         <div class="hero__content">
             <div class="hero__title hidden-mobile">
                 <span>Автозапчасти</span>
@@ -69,6 +70,7 @@
                     src="/src/assets/icons/turbo.png"
                     alt="turbo"></a>
         </div>
+
     </section>
 
     <section class="container catalog catalog--show-more">
@@ -125,6 +127,7 @@
 
     <section class="callback">
         <div class="callback--inner container">
+
             <div class="callback__content">
                 <div class="callback__heading">
                     <h2 class="h2 callback__title">Нужна помощь в&nbsp;подборе запчасти?</h2>
@@ -154,22 +157,27 @@
                     <input type="text" name="phone" placeholder="Номер телефона">
                     <input type="email" name="email" placeholder="Email">
 
-                    <select name="messenger multi-form__messenger" >
-                        <option value="Telegram">Telegram</option>
-                        <option value="WhatsApp">WhatsApp</option>
-                    </select>
+                    <div class="multi-form__messenger">
+                        <select name="messenger" >
+                            <option value="Telegram">Telegram</option>
+                            <option value="WhatsApp">WhatsApp</option>
+                        </select>
+                    </div>
 
                     <label class="checkbox multi-form__checkbox" >
                         <input type="checkbox" name="policy" required>
-                        Я ознакомлен с политикой конфиденциальности
+                        <p>
+                            Я ознакомлен(-на) с <span class="link">политикой конфиденциальности</span> и даю согласие на <span class="link">обработку персональных данных.</span>
+                        </p>
                     </label>
                 </div>
 
                 <!-- НАВИГАЦИЯ -->
                 <div class="multi-form__nav form-nav">
-                    <button type="button" id="nextBtn" class="btn btn-next btn--uppercase">ДАЛЕЕ</button>
+                    <button type="button" id="nextBtn" class="btn btn-next btn--uppercase"><span>ДАЛЕЕ</span> <img src="./src/assets/icons/chevron-right.svg" alt=""></button>
                     <button type="submit" id="submitBtn" class="btn btn--uppercase btn-submit hidden">
-                        ПОДОБРАТЬ ЗАПЧАСТЬ
+                        <span>ПОДОБРАТЬ ЗАПЧАСТЬ</span>
+                        <img src="./src/assets/icons/turbo.png" alt="">
                     </button>
 
                     <div class="dots">
@@ -179,7 +187,38 @@
                 </div>
 
             </form>
+
         </div>
+    </section>
+
+    <section class="assurance container">
+        <h2 class="h2 assurance__title">
+            Заказывая запчасти у нас,&ensp;<span>вы&nbsp;получаете</span>
+        </h2>
+
+        <div class="assurance__items">
+            <div class="assurance__item assurance__item--red">
+                <h3 class="h3 assurance__h3">Гарантию на запчасть</h3>
+                <p>Мы сотрудничаем только с проверенными брендами и&nbsp;официальными поставщиками, поэтому вы защищены от подделок и&nbsp;получаете гарантированное качество каждой детали.</p>
+                <img src="./src/assets/images/docs.png" alt="docs" class="assurance__img-docs">
+            </div>
+            <div class="assurance__item">
+                <h3 class="h3 assurance__h3">Минимальные сроки поставки</h3>
+                <p>Мы подбираем оптимальный вариант доставки — так, чтобы запчасть приехала быстро, без переплаты за срочность.</p>
+                <img src="./src/assets/images/cargo-time.png" alt="cargo    " class="assurance__img-cargo">
+            </div>
+            <div class="assurance__item">
+                <h3 class="h3 assurance__h3">Оперативную доставку по всей России</h3>
+                <p>Организуем доставку в любой регион страны — быстро и удобно. Вы сами выбираете, куда привезти заказ, а мы всё берём на себя.</p>
+                <img src="./src/assets/images/map.jpg" alt="map" class="assurance__img-map">
+            </div>
+            <div class="assurance__item">
+                <h3 class="h3 assurance__h3">Помощь квалифицированного специалиста</h3>
+                <p>Наши эксперты знают не только производителей и аналоги, но и тонкости модификаций каждой модели. Подберём запчасть, которая идеально подойдёт вашему автомобилю.</p>
+                <img src="./src/assets/images/pods.png" alt="pods" class="assurance__img-pods">
+            </div>
+        </div>
+
     </section>
 
 

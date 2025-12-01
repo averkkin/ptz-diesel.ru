@@ -48,22 +48,34 @@
   }
 
   &__messenger {
-    @include fluid-text(28, 12);
-
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-
-
-    font-weight: 400;
-    color: var(--color-white);
+    width: 100%;
     height: fluid(92, 41);
-    background-color: #7F7F7F;
-    border-radius: var(--border-radius-m);
-    padding-inline: fluid(32, 14);
 
-    @include mobile {
-      border-radius: var(--border-radius-s);
+    & select {
+      @include fluid-text(28, 12);
+
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+
+      outline: none;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+
+      font-weight: 400;
+      color: var(--color-white);
+      height: inherit;
+      width: inherit;
+      background-color: #7F7F7F;
+      border-radius: var(--border-radius-m);
+      padding-inline: fluid(32, 14);
+
+      @include mobile {
+        border-radius: var(--border-radius-s);
+      }
     }
   }
 
@@ -91,7 +103,20 @@
     }
 
     & button {
-      margin-top: fluid(87, 49);
+      margin-top: fluid(87, 20);
+      height: fluid(123, 65);
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    gap: fluid(15, 6);
+    align-items: flex-start;
+
+    & input {
+      margin-top: rem(3);
+      width: fluid(23, 10);
+      height: fluid(23, 10);
     }
   }
 }

@@ -1,18 +1,37 @@
 @use '../../styles/helpers' as *;
 
 .callback {
-  height: fluid(1136, 1135);
+  height: fluid(1136, 500);
   background: linear-gradient(145deg, #303030 0%, #282828 100%);
   color: var(--color-white);
   overflow: hidden;
   position: relative;
   padding-block: fluid(97, 20);
 
+  @include tablet {
+    height: fit-content;
+
+    & .multi-form {
+      margin-top: rem(400);
+    }
+  }
+
+  @include mobile {
+    & .multi-form {
+      margin-top: rem(350);
+    }
+  }
+
 
   &--inner {
     display: flex;
     justify-content: space-between;
     height: 100%;
+    gap: rem(30);
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__content {
@@ -52,8 +71,15 @@
     height: fluid(797, 395);
     //z-index: -1;
 
-    @include mobile {
-      top: 45%;
+    @include tablet {
+      top: 37%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: rem(17);
+    }
+
+    @include mobile-s {
+      top: 37%;
       left: 50%;
       transform: translate(-50%, -50%);
       margin-top: rem(17);
@@ -64,13 +90,15 @@
     position: absolute;
     bottom: 20%;
     left: 25%;
-    width: fluid(476, 492);
-    height: fluid(277, 93);
+    //width: fluid(476, 492);
+    height: fluid(150, 50);
+    width: auto;
 
-    @include mobile {
-      position: relative;
-      bottom: 0;
-      left: -100px;
+    @include tablet {
+      position: absolute;
+      top: 30%;
+      left: 70%;
+      transform: translate(-50%, -50%);
       margin-top: rem(17);
     }
   }
