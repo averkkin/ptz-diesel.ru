@@ -2,11 +2,9 @@
 
 .callback {
   height: fluid(1136, 500);
-  background: linear-gradient(145deg, #303030 0%, #282828 100%);
   color: var(--color-white);
-  overflow: hidden;
   position: relative;
-  padding-block: fluid(97, 20);
+  overflow: hidden;
 
   @include tablet {
     height: fit-content;
@@ -28,9 +26,15 @@
     justify-content: space-between;
     height: 100%;
     gap: rem(30);
+    background: linear-gradient(145deg, #303030 0%, #282828 100%);
+    overflow: hidden;
+    padding-block: fluid(97, 20);
+    padding-inline: fluid(100, 12);
+    border-radius: var(--border-radius-l);
 
     @include tablet {
       flex-direction: column;
+      border-radius: var(--border-radius-m);
     }
   }
 

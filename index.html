@@ -6,8 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/src/styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <title>Document</title>
+    <title>ptz</title>
 </head>
 <body>
 
@@ -84,7 +86,9 @@
             <form class="search catalog__search" action="#" method="POST">
                 <div class="search__input-group catalog__input-group">
                     <label for="search"></label>
-                    <input type="search" id="search" class="form__input form__input--light form__input--text search__input" placeholder="VIN, название или артикул">
+                    <input type="search" id="search"
+                           class="form__input form__input--light form__input--text search__input"
+                           placeholder="VIN, название или артикул">
                 </div>
                 <button type="submit" class="btn btn--no-shadow">Найти</button>
             </form>
@@ -125,16 +129,21 @@
 
     </section>
 
-    <section class="callback">
+    <section class="callback container">
+
         <div class="callback--inner container">
 
             <div class="callback__content">
                 <div class="callback__heading">
                     <h2 class="h2 callback__title">Нужна помощь в&nbsp;подборе запчасти?</h2>
-                    <p class="callback__subtitle">Не нужно разбираться в производителях и складах — наши специалисты сделают это за вас. Подберём нужную запчасть и сообщим, когда она будет у вас. Без дополнительных платежей.</p>
+                    <p class="callback__subtitle">Не нужно разбираться в производителях и складах — наши специалисты
+                        сделают это за вас. Подберём нужную запчасть и сообщим, когда она будет у вас. Без
+                        дополнительных платежей.</p>
                 </div>
-                <img src="./src/assets/images/iphone.png" alt="Iphone" class="callback__img-phone" width="993" height="797">
-                <img src="./src/assets/images/message.svg" alt="Message" class="callback__img-message" width="476" height="147">
+                <img src="./src/assets/images/iphone.png" alt="Iphone" class="callback__img-phone" width="993"
+                     height="797">
+                <img src="./src/assets/images/message.svg" alt="Message" class="callback__img-message" width="476"
+                     height="147">
             </div>
 
             <form id="multiForm" class="multi-form">
@@ -158,23 +167,25 @@
                     <input type="email" name="email" placeholder="Email">
 
                     <div class="multi-form__messenger">
-                        <select name="messenger" >
+                        <select name="messenger">
                             <option value="Telegram">Telegram</option>
                             <option value="WhatsApp">WhatsApp</option>
                         </select>
                     </div>
 
-                    <label class="checkbox multi-form__checkbox" >
+                    <label class="checkbox multi-form__checkbox">
                         <input type="checkbox" name="policy" required>
                         <p>
-                            Я ознакомлен(-на) с <span class="link">политикой конфиденциальности</span> и даю согласие на <span class="link">обработку персональных данных.</span>
+                            Я ознакомлен(-на) с <span class="link">политикой конфиденциальности</span> и даю согласие на
+                            <span class="link">обработку персональных данных.</span>
                         </p>
                     </label>
                 </div>
 
                 <!-- НАВИГАЦИЯ -->
                 <div class="multi-form__nav form-nav">
-                    <button type="button" id="nextBtn" class="btn btn-next btn--uppercase"><span>ДАЛЕЕ</span> <img src="./src/assets/icons/chevron-right.svg" alt=""></button>
+                    <button type="button" id="nextBtn" class="btn btn-next btn--uppercase"><span>ДАЛЕЕ</span> <img
+                            src="./src/assets/icons/chevron-right.svg" alt=""></button>
                     <button type="submit" id="submitBtn" class="btn btn--uppercase btn-submit hidden">
                         <span>ПОДОБРАТЬ ЗАПЧАСТЬ</span>
                         <img src="./src/assets/icons/turbo.png" alt="">
@@ -199,28 +210,255 @@
         <div class="assurance__items">
             <div class="assurance__item assurance__item--red">
                 <h3 class="h3 assurance__h3">Гарантию на запчасть</h3>
-                <p>Мы сотрудничаем только с проверенными брендами и&nbsp;официальными поставщиками, поэтому вы защищены от подделок и&nbsp;получаете гарантированное качество каждой детали.</p>
+                <p>Мы сотрудничаем только с проверенными брендами и&nbsp;официальными поставщиками, поэтому вы защищены
+                    от подделок и&nbsp;получаете гарантированное качество каждой детали.</p>
                 <img src="./src/assets/images/docs.png" alt="docs" class="assurance__img-docs">
             </div>
             <div class="assurance__item">
                 <h3 class="h3 assurance__h3">Минимальные сроки поставки</h3>
-                <p>Мы подбираем оптимальный вариант доставки — так, чтобы запчасть приехала быстро, без переплаты за срочность.</p>
+                <p>Мы подбираем оптимальный вариант доставки — так, чтобы запчасть приехала быстро, без переплаты за
+                    срочность.</p>
                 <img src="./src/assets/images/cargo-time.png" alt="cargo    " class="assurance__img-cargo">
             </div>
             <div class="assurance__item">
                 <h3 class="h3 assurance__h3">Оперативную доставку по всей России</h3>
-                <p>Организуем доставку в любой регион страны — быстро и удобно. Вы сами выбираете, куда привезти заказ, а мы всё берём на себя.</p>
+                <p>Организуем доставку в любой регион страны — быстро и удобно. Вы сами выбираете, куда привезти заказ,
+                    а мы всё берём на себя.</p>
                 <img src="./src/assets/images/map.jpg" alt="map" class="assurance__img-map">
             </div>
             <div class="assurance__item">
                 <h3 class="h3 assurance__h3">Помощь квалифицированного специалиста</h3>
-                <p>Наши эксперты знают не только производителей и аналоги, но и тонкости модификаций каждой модели. Подберём запчасть, которая идеально подойдёт вашему автомобилю.</p>
+                <p>Наши эксперты знают не только производителей и аналоги, но и тонкости модификаций каждой модели.
+                    Подберём запчасть, которая идеально подойдёт вашему автомобилю.</p>
                 <img src="./src/assets/images/pods.png" alt="pods" class="assurance__img-pods">
             </div>
         </div>
 
     </section>
 
+    <section class="brands container">
+        <div class="h2 brands__title">
+
+            <h2>Мы подберем для вас запчасти</h2>
+
+            <div class="brands__title-flex">
+
+                <span class="text-linear-red">любого&nbsp;бренда</span>
+
+                <div class="brands__title-icon">
+                    <img src="./src/assets/icons/gears.svg" alt="gears">
+                    <span>Любой модицикафии</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div style="
+            background-color: var(--color-black-10);
+            width: 100%;
+            height: 500px;
+        "></div>
+
+        <!--        <div class="brands__slider swiper">-->
+        <!--            <div class="swiper-wrapper">-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo1.png" alt="logo" >-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo2.png" alt="logo">-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo3.png" alt="logo">-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo4.png" alt="logo">-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo5.png" alt="logo">-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo6.png" alt="logo">-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo7.png" alt="logo">-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo8.png" alt="logo">-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo9.png" alt="logo">-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo10.png" alt="logo">-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo11.png" alt="logo">-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo12.png" alt="logo">-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo13.png" alt="logo">-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo14.png" alt="logo">-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo15.png" alt="logo">-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo16.png" alt="logo">-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo17.png" alt="logo">-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo18.png" alt="logo">-->
+        <!--                </div>-->
+        <!--                <div class="swiper-slide">-->
+        <!--                    <img src="./src/assets/images/logo19.png" alt="logo">-->
+        <!--                </div>-->
+        <!--            </div>-->
+
+        <!--            <div class="brands-slider__nav brands-slider__nav&#45;&#45;prev"></div>-->
+        <!--            <div class="brands-slider__nav brands-slider__nav&#45;&#45;next"></div>-->
+        <!--        </div>-->
+
+    </section>
+
+    <section class="delivery">
+
+        <div class="delivery__steps">
+
+            <div class="delivery__content">
+
+                <div class="delivery__heading">
+                    <h2 class="h2">Этапы доставки </h2>
+                    <p>Какие этапы работы и как заказать запчасти.</p>
+                </div>
+
+                <div class="delivery__info">
+
+                    <div class="delivery__text">
+                        <p>Мы ежедневно отправляем заказы по России через СДЭК, Деловые линии, KIT, Major Express и другие транспортные компании.</p>
+                        <p>Можем вызвать курьера за вас или передать груз вашей транспортной компании — как вам удобнее.</p>
+                    </div>
+
+                    <div class="delivery__more">
+                        <ul>
+                            <li>Доставка оплачивается при получении.</li>
+                            <li>Наш офис открыт для приёма заказов и отгрузок по адресу: г. Петрозаводск, Лесной проспект, д. 51, строение 4.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <ul class="delivery__steps-list">
+                <li>
+                    <div class="delivery__step-img">
+                        <img src="./src/assets/icons/01.png">
+                        <span>01</span>
+                    </div>
+                    <p>Оставляете заявку. </p>
+                </li>
+                <li>
+                    <div class="delivery__step-img">
+                        <img src="./src/assets/icons/02.png">
+                        <span>02</span>
+                    </div>
+                    <p>Мы подбираем запчасть.</p>
+                </li>
+                <li>
+                    <div class="delivery__step-img">
+                        <img src="./src/assets/icons/03.png">
+                        <span>03</span>
+                    </div>
+                    <p>Согласовываем заказ, связываясь с вами и вы производите оплату.</p>
+                </li>
+                <li>
+                    <div class="delivery__step-img">
+                        <img src="./src/assets/icons/04.png">
+                        <span>04</span>
+                    </div>
+                    <p>Отправляем в выбранную транспортную компанию.</p>
+                </li>
+                <li>
+                    <div class="delivery__step-img">
+                        <img src="./src/assets/icons/05.png">
+                        <span>05</span>
+                    </div>
+                    <p>Получаете уведомление.</p>
+                </li>
+                <li>
+                    <div class="delivery__step-img">
+                        <img src="./src/assets/icons/06.png">
+                        <span>06</span>
+                    </div>
+                    <p>Забираете заказ.</p>
+                </li>
+            </ul>
+
+            <img src="./src/assets/images/cargo.png" alt="cargo" class="delivery__cargo-img" width="901" height="782">
+
+        </div>
+
+        <div class="delivery__payment">
+
+            <div class="delivery__payment-inner">
+                <div class="delivery__methods">
+                    <h3>Мы принимаем все распространённые способы оплаты:</h3>
+                    <ul class="items">
+                        <li class="item">
+                            <img src="./src/assets/icons/circle-check.svg" alt="check">
+                            <p>Оплата по выставленному счёту для юридических лиц.</p>
+                        </li>
+                        <li class="item">
+                            <img src="./src/assets/icons/circle-check.svg" alt="check">
+                            <p>Оплата по счёту для частных клиентов.</p>
+                        </li>
+                        <li class="item">
+                            <img src="./src/assets/icons/circle-check.svg" alt="check">
+                            <p>Онлайн-оплата через приложение любого банка.</p>
+                        </li>
+                        <li class="item">
+                            <img src="./src/assets/icons/circle-check.svg" alt="check">
+                            <p>Оплата наличными в нашем отделе продаж по адресу: г. Петрозаводск, Лесной проспект, д. 51, строение 4.</p>
+                        </li>
+                    </ul>
+                    <div class="delivery__more-info">
+                        <h5 class="h5"></h5>
+                        <div class="delivery__phone">
+                            <img src="./src/assets/icons/phone.svg" alt="">
+                            <a href="tel:+7 (8142) 33-10-33">+7 (8142) 33-10-33</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="" class="btn btn--uppercase visible-mobile">Сделать заказ <img src="./src/assets/icons/chevron-right.svg"></a>
+            </div>
+
+            <div class="delivery__content">
+                <div class="delivery__heading">
+                    <div class="delivery__title">
+                        <h2 class="h2">Удобная оплата</h2>
+                        <p>для юридических и физических лиц.</p>
+                    </div>
+                    <p class="delivery__subtitle">
+                        Вы можете оплатить заказ наличными в нашем отделе продаж, по адресу:
+                        г. Петрозаводск, Лесной проспект, д. 51, строение 4.
+                    </p>
+                </div>
+
+                <a href="" class="btn btn--uppercase hidden-mobile">Сделать заказ <img src="./src/assets/icons/chevron-right.svg"></a>
+            </div>
+
+            <img src="./src/assets/images/cash.png" alt="cargo" class="delivery__cash-img" width="536" height="479">
+
+        </div>
+
+    </section>
 
 </main>
 <script src="/src/main.js" type="module"></script>

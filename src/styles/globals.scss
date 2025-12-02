@@ -52,9 +52,8 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  @include fluid-text(30, 14);
-
-  font-weight: 700;
+  @include fluid-text(40, 18);
+  font-weight: 600;
 }
 
 h5, .h5 {
@@ -93,4 +92,14 @@ a {
 
 :focus-visible {
   @include focus-visible;
+}
+
+.text-linear-red {
+  background: var(--linear-red-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Для новых браузеров */
+  background-clip: text;
+  color: transparent;
 }
