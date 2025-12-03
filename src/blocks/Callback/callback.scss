@@ -5,6 +5,7 @@
   color: var(--color-white);
   position: relative;
   overflow: hidden;
+  min-height: fluid(1136, 600);
 
   @include tablet {
     height: fit-content;
@@ -47,10 +48,12 @@
     display: flex;
     flex-direction: column;
     gap: fluid(21, 12);
+
+
   }
 
   &__title {
-    @include fluid-text(130, 48);
+    @include fluid-text(120, 48);
     color: var(--color-white);
 
     @include mobile-s {

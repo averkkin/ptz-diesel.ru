@@ -1,0 +1,120 @@
+@use '../../styles/helpers' as *;
+
+.support {
+  display: flex;
+  flex-direction: column;
+  gap: fluid(37 ,12);
+  justify-content: center;
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: fluid(10, 5);
+    width: 100%;
+  }
+
+  & h2 {
+    @include fluid-text(120, 55);
+    text-align: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: var(--border-radius-m);
+    background-color: #646363;
+    position: relative;
+
+    @include mobile {
+      border-radius: var(--border-radius-mobile-m);
+    }
+
+    & h4 {
+      @include fluid-text(35, 12);
+      font-weight: 400;
+      color: var(--color-white);
+    }
+
+    &.is-active  {
+
+      .support__answer {
+        opacity: 1;
+        position: relative;
+        transform: translateY(0px);
+        pointer-events: auto;
+      }
+
+
+      .support__question {
+        span:nth-child(1) {
+          transform: translate(-50%, -50%) rotate(90deg);
+        }
+        span:nth-child(2) {
+          width: 0;
+        }
+      }
+    }
+  }
+
+  &__question {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    color: var(--color-white);
+    cursor: pointer;
+    z-index: 2;
+
+    padding-block: fluid(40, 20);
+    padding-inline: fluid(50, 18);
+    border-radius: var(--border-radius-m);
+
+    background: linear-gradient(270deg, #515151 0%, #292929 100%);
+
+    @include mobile {
+      border-radius: var(--border-radius-mobile-m);
+    }
+  }
+
+  &__action {
+    position: relative;
+    height: fluid(24, 16);
+    width: fluid(24, 16);
+    transition: var(--transition-duration);
+
+    & span {
+      background-color: var(--color-white);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s ease;
+
+      &:first-child {
+        width: rem(3);
+        height: 100%;
+      }
+
+      &:last-child {
+        width: 100%;
+        height: rem(3);
+      }
+    }
+  }
+
+  &__answer {
+    @include fluid-text(30, 12);
+    color: var(--color-white);
+    font-weight: 400;
+    padding-block: fluid(40, 20);
+    padding-inline: fluid(50, 18);
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(-50px);
+    z-index: 1;
+  }
+}
