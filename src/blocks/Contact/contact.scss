@@ -15,6 +15,10 @@
     overflow: hidden;
     border-radius: var(--border-radius-l);
 
+    @include mobile-above {
+      margin-bottom: rem(40);
+    }
+
     @include mobile {
       order: 2;
       border-radius: var(--border-radius-m);

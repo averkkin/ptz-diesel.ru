@@ -25,3 +25,7 @@
 @use '../blocks/Contact/contact.scss';
 @use '../blocks/Diagnostics/diagnostics.scss';
 @use '../blocks/Support/support.scss';
+
+//Modals
+@use '../modals/modal.scss';
+@use '../modals/Callback/modal-callback.scss';

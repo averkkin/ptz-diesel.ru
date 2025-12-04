@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <title>ptz</title>
+    <title>Автозапчасти</title>
 </head>
 <body>
 
@@ -19,21 +19,34 @@
              height="113" class="logo__img">
         <nav class="header__menu hidden-mobile">
             <ul>
-                <li><a href="">каталог товаров</a></li>
-                <li><a href="">доставка и оплата </a></li>
-                <li><a href="">контакты</a></li>
-                <li><a href="">о нас</a></li>
+                <li><a href="#catalog">каталог товаров</a></li>
+                <li><a href="#delivery">доставка и оплата </a></li>
+                <li><a href="#contact">контакты</a></li>
+                <li><a href="#assurance">о нас</a></li>
                 <li><a href="">корзина</a></li>
             </ul>
         </nav>
     </div>
     <div class="header__contact">
         <a href="tel:+7(8142)33-10-33" class="header__phone">+7 (8142) 33-10-33</a>
-        <button class="btn btn--small btn--white header__btn">позвонить</button>
+        <button class="btn btn--small btn--white header__btn js-open-modal">позвонить</button>
     </div>
     <div class="header__burger burger-menu">
         <span></span><span></span><span></span>
     </div>
+
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <nav class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu__list">
+            <li><a href="#catalog">каталог товаров</a></li>
+            <li><a href="#delivery">доставка и оплата </a></li>
+            <li><a href="#contact">контакты</a></li>
+            <li><a href="#assurance">о нас</a></li>
+            <li><a href="">корзина</a></li>
+        </ul>
+    </nav>
+
 </header>
 
 <main class="content">
@@ -68,14 +81,14 @@
                     <p>Оптом и в розницу, с&nbsp;доставкой в&nbsp;любую точку России.</p>
                 </div>
             </div>
-            <a href="#popup:callback" class="btn btn--uppercase"><span>подобрать запчасть</span><img
+            <a href="#callback" class="btn btn--uppercase"><span>подобрать запчасть</span><img
                     src="/src/assets/icons/turbo.png"
                     alt="turbo"></a>
         </div>
 
     </section>
 
-    <section class="container catalog catalog--show-more">
+    <section id="catalog" class="container catalog catalog--show-more">
 
         <div class="catalog__content">
 
@@ -116,7 +129,7 @@
                         <p>Геометрии турбокомпрессоров</p>
                         <p>Вестгейты турбокомпрессоров</p>
                     </div>
-                    <button class="catalog__btn-more btn--more" type="button">Посмотреть все</button>
+                    <a href="/catalog" class="catalog__btn-more btn--more">Посмотреть все</a>
                 </div>
             </div>
 
@@ -129,7 +142,7 @@
 
     </section>
 
-    <section class="callback container">
+    <section id="callback" class="callback container">
 
         <div class="callback--inner container">
 
@@ -200,9 +213,10 @@
             </form>
 
         </div>
+
     </section>
 
-    <section class="assurance container">
+    <section id="assurance" class="assurance container">
         <h2 class="h2 assurance__title">
             Заказывая запчасти у нас,&ensp;<span>вы&nbsp;получаете</span>
         </h2>
@@ -253,80 +267,42 @@
             </div>
         </div>
 
-        <div style="
-            background-color: var(--color-black-10);
-            width: 100%;
-            height: 500px;
-        "></div>
+        <div class="brands__slider swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./src/assets/images/1.png" alt="logos">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./src/assets/images/2.png" alt="logos">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./src/assets/images/3.png" alt="logos">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./src/assets/images/4.png" alt="logos">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./src/assets/images/5.png" alt="logos">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./src/assets/images/6.png" alt="logos">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./src/assets/images/7.png" alt="logos">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./src/assets/images/7.png" alt="logos">
+                </div>
+            </div>
 
-        <!--        <div class="brands__slider swiper">-->
-        <!--            <div class="swiper-wrapper">-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo1.png" alt="logo" >-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo2.png" alt="logo">-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo3.png" alt="logo">-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo4.png" alt="logo">-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo5.png" alt="logo">-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo6.png" alt="logo">-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo7.png" alt="logo">-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo8.png" alt="logo">-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo9.png" alt="logo">-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo10.png" alt="logo">-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo11.png" alt="logo">-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo12.png" alt="logo">-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo13.png" alt="logo">-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo14.png" alt="logo">-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo15.png" alt="logo">-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo16.png" alt="logo">-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo17.png" alt="logo">-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo18.png" alt="logo">-->
-        <!--                </div>-->
-        <!--                <div class="swiper-slide">-->
-        <!--                    <img src="./src/assets/images/logo19.png" alt="logo">-->
-        <!--                </div>-->
-        <!--            </div>-->
+            <div class="brands-slider__nav brands-slider__nav--prev"><img src="./src/assets/icons/left.svg" alt="arrow-left"></div>
+            <div class="brands-slider__nav brands-slider__nav--next"><img src="./src/assets/icons/right.svg" alt="arrow-right"></div>
 
-        <!--            <div class="brands-slider__nav brands-slider__nav&#45;&#45;prev"></div>-->
-        <!--            <div class="brands-slider__nav brands-slider__nav&#45;&#45;next"></div>-->
-        <!--        </div>-->
+        </div>
 
     </section>
 
-    <section class="delivery">
+    <section id="delivery" class="delivery">
 
         <div class="delivery__steps">
 
@@ -340,14 +316,18 @@
                 <div class="delivery__info">
 
                     <div class="delivery__text">
-                        <p>Мы ежедневно отправляем заказы по России через СДЭК, Деловые линии, KIT, Major Express и другие транспортные компании.</p>
-                        <p>Можем вызвать курьера за вас или передать груз вашей транспортной компании — как вам удобнее.</p>
+                        <p>Мы ежедневно отправляем заказы по России через СДЭК, Деловые линии, KIT, Major Express и
+                            другие транспортные компании.</p>
+                        <p>Можем вызвать курьера за вас или передать груз вашей транспортной компании — как вам
+                            удобнее.</p>
                     </div>
 
                     <div class="delivery__more">
                         <ul>
                             <li>Доставка оплачивается при получении.</li>
-                            <li>Наш офис открыт для приёма заказов и отгрузок по адресу: г. Петрозаводск, Лесной проспект, д. 51, строение 4.</li>
+                            <li>Наш офис открыт для приёма заказов и отгрузок по адресу: г. Петрозаводск, Лесной
+                                проспект, д. 51, строение 4.
+                            </li>
                         </ul>
                     </div>
 
@@ -425,7 +405,8 @@
                         </li>
                         <li class="item">
                             <img src="./src/assets/icons/circle-check.svg" alt="check">
-                            <p>Оплата наличными в нашем отделе продаж по адресу: г. Петрозаводск, Лесной проспект, д. 51, строение 4.</p>
+                            <p>Оплата наличными в нашем отделе продаж по адресу: г. Петрозаводск, Лесной проспект, д.
+                                51, строение 4.</p>
                         </li>
                     </ul>
                     <div class="delivery__more-info">
@@ -436,7 +417,8 @@
                         </div>
                     </div>
                 </div>
-                <a href="" class="btn btn--uppercase visible-mobile">Сделать заказ <img src="./src/assets/icons/chevron-right.svg"></a>
+                <a href="/catalog" class="btn btn--uppercase visible-mobile">Сделать заказ <img
+                        src="./src/assets/icons/chevron-right.svg"></a>
             </div>
 
             <div class="delivery__content">
@@ -451,7 +433,8 @@
                     </p>
                 </div>
 
-                <a href="" class="btn btn--uppercase hidden-mobile">Сделать заказ <img src="./src/assets/icons/chevron-right.svg"></a>
+                <a href="" class="btn btn--uppercase hidden-mobile">Сделать заказ <img
+                        src="./src/assets/icons/chevron-right.svg"></a>
             </div>
 
             <img src="./src/assets/images/cash.png" alt="cargo" class="delivery__cash-img" width="536" height="479">
@@ -459,74 +442,86 @@
         </div>
 
     </section>
-    
-    <section class="contact container">
-        <div class="contact__map">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afd159681951d42534a36da7d1eff8dcf78cc01f87010a6da11c1717cc910f5d1&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
-        </div>
-        <div class="contact__content">
 
-            <div class="contact__content--inner">
+    <div style="display: flex; flex-direction: column;" class="container">
 
-                <h2 class="h2 contact__h2">Контакты</h2>
+        <section id="contact" class="contact">
+            <div class="contact__map">
+                <script type="text/javascript" charset="utf-8" async
+                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afd159681951d42534a36da7d1eff8dcf78cc01f87010a6da11c1717cc910f5d1&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+            <div class="contact__content">
 
-                <div class="contact__info">
-                    <ul>
-                        <li><img src="./src/assets/icons/phone.svg" alt="phone"><a href="tel:+7 (8142) 33-10-33">+7 (8142) 33-10-33</a></li>
-                        <li><img src="./src/assets/icons/clock.svg" alt="clock"><span>Режим работы: пн-пт 09:00 - 18:00</span></li>
-                        <li><img src="./src/assets/icons/envelope.svg" alt="e-mail"><a href="mailto:yurikom@mail.ru">Email: yurikom@mail.ru</a></li>
-                    </ul>
+                <div class="contact__content--inner">
+
+                    <h2 class="h2 contact__h2">Контакты</h2>
+
+                    <div class="contact__info">
+                        <ul>
+                            <li><img src="./src/assets/icons/phone.svg" alt="phone"><a href="tel:+7 (8142) 33-10-33">+7
+                                (8142) 33-10-33</a></li>
+                            <li><img src="./src/assets/icons/clock.svg"
+                                     alt="clock"><span>Режим работы: пн-пт 09:00 - 18:00</span></li>
+                            <li><img src="./src/assets/icons/envelope.svg" alt="e-mail"><a href="mailto:yurikom@mail.ru">Email:
+                                yurikom@mail.ru</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="contact__img hidden-mobile">
+                    <img src="./src/assets/images/motor-2.png" alt="motor">
                 </div>
 
             </div>
-
-            <div class="contact__img hidden-mobile">
+            <div class="contact__img visible-mobile">
                 <img src="./src/assets/images/motor-2.png" alt="motor">
             </div>
 
-        </div>
-        <div class="contact__img visible-mobile">
-            <img src="./src/assets/images/motor-2.png" alt="motor">
-        </div>
-        
-    </section>
+        </section>
+        <section class="diagnostics">
 
-    <section class="diagnostics container">
+            <div class="diagnostics__wrapper">
 
-        <div class="diagnostics__wrapper">
-
-            <div class="diagnostics__heading">
-                <h3 class="h3">Если вы из Петрозаводска, доверьте свой автомобиль нашим специалистам&nbsp;— </h3>
-                <p>подберём детали, проведём диагностику и&nbsp;сделаем всё «под ключ».</p>
-            </div>
-
-            <div class="diagnostics__items">
-                <div class="diagnostics__item">
-                    <p>Cообщество VKontakte нашего автосервиса.</p>
+                <div class="diagnostics__heading">
+                    <h3 class="h3">Если вы из Петрозаводска, доверьте свой автомобиль нашим специалистам&nbsp;— </h3>
+                    <p>подберём детали, проведём диагностику и&nbsp;сделаем всё «под ключ».</p>
                 </div>
-                <div class="diagnostics__item">
-                    <p>Сайт нашего автосервиса.</p>
+
+                <div class="diagnostics__items">
+                    <div class="diagnostics__item">
+                        <p>Cообщество VKontakte нашего автосервиса.</p>
+                    </div>
+                    <div class="diagnostics__item">
+                        <p>Сайт нашего автосервиса.</p>
+                    </div>
                 </div>
+
+                <div class="diagnostics__info-items">
+                    <ul class="diagnostics__list">
+                        <li class="diagnostics__area"><img src="./src/assets/icons/clock-white.svg" alt="clock"><span>Режим работы: пн-пт 09:00 - 18:00</span>
+                        </li>
+                        <li class="diagnostics__area"><img src="./src/assets/icons/location-dot-white.svg" alt="phone"><span>г. Петрозаводск, Лесной проспект, д. 51, строение 4.</span>
+                        </li>
+                        <li>
+                            <ul class="diagnostics__list-col">
+                                <li><img src="./src/assets/icons/phone-white.svg" alt="phone"><a
+                                        href="tel:+7 (8142) 33-10-33">+7 (8142) 33-10-33</a></li>
+                                <li><img src="./src/assets/icons/envelopewhite.svg" alt="e-mail"><a
+                                        href="mailto:yurikom@mail.ru">Email: yurikom@mail.ru</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <button type="button" class="btn diagnostics__btn js-open-modal">Узнать стоимость услуг <img
+                        src="./src/assets/icons/chevron-right.svg" alt="chevron-right"></button>
+
             </div>
 
-            <div class="diagnostics__info-items">
-                <ul class="diagnostics__list">
-                    <li><img src="./src/assets/icons/clock-white.svg" alt="clock"><span>Режим работы: пн-пт 09:00 - 18:00</span></li>
-                    <li><img src="./src/assets/icons/location-dot-white.svg" alt="phone"><span>г. Петрозаводск, Лесной проспект, д. 51, строение 4.</span></li>
-                    <li>
-                        <ul class="diagnostics__list-col">
-                            <li><img src="./src/assets/icons/phone-white.svg" alt="phone"><a href="tel:+7 (8142) 33-10-33">+7 (8142) 33-10-33</a></li>
-                            <li><img src="./src/assets/icons/envelopewhite.svg" alt="e-mail"><a href="mailto:yurikom@mail.ru">Email: yurikom@mail.ru</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+        </section>
 
-            <a href="" class="btn diagnostics__btn">Узнать стоимость услуг <img src="./src/assets/icons/chevron-right.svg" alt="chevron-right"></a>
-
-        </div>
-
-    </section>
+    </div>
 
     <section class="support container">
         <h2>Часто задаваемые вопросы</h2>
@@ -538,7 +533,9 @@
                     <div class="support__action"><span></span><span></span></div>
                 </div>
                 <div class="support__answer">
-                    <p>Вы можете оставить заявку через форму на сайте — специалист свяжется с вами, уточнит детали и поможет подобрать нужную запчасть. Также можно оформить заказ по телефону или написать нам на e-mail, указав марку, модель и год выпуска автомобиля.</p>
+                    <p>Вы можете оставить заявку через форму на сайте — специалист свяжется с вами, уточнит детали и
+                        поможет подобрать нужную запчасть. Также можно оформить заказ по телефону или написать нам на
+                        e-mail, указав марку, модель и год выпуска автомобиля.</p>
                 </div>
             </div>
 
@@ -549,7 +546,8 @@
                 </div>
                 <div class="support__answer">
                     <p>Мы принимаем заказы и консультации ежедневно в рабочее время.
-                        Актуальный режим работы указан в разделе «Контакты». Если оставите заявку после окончания рабочего дня — мы свяжемся с вами на следующий день.</p>
+                        Актуальный режим работы указан в разделе «Контакты». Если оставите заявку после окончания
+                        рабочего дня — мы свяжемся с вами на следующий день.</p>
                 </div>
             </div>
 
@@ -559,7 +557,9 @@
                     <div class="support__action"><span></span><span></span></div>
                 </div>
                 <div class="support__answer">
-                    <p>Достаточно заполнить короткую анкету на сайте — наши специалисты с многолетним опытом подберут запчасть именно под вашу модификацию автомобиля. Подбор бесплатный. Мы учитываем производителя, надёжные аналоги и проверенные склады поставщиков.</p>
+                    <p>Достаточно заполнить короткую анкету на сайте — наши специалисты с многолетним опытом подберут
+                        запчасть именно под вашу модификацию автомобиля. Подбор бесплатный. Мы учитываем производителя,
+                        надёжные аналоги и проверенные склады поставщиков.</p>
                 </div>
             </div>
 
@@ -569,7 +569,9 @@
                     <div class="support__action"><span></span><span></span></div>
                 </div>
                 <div class="support__answer">
-                    <p>Для юридических лиц доступна оплата по счёту. Менеджер выставит счёт,  и вы сможете оплатить его удобным для вас способом. Также возможна онлайн  через банк или наличными в наших отделах продаж.</p>
+                    <p>Для юридических лиц доступна оплата по счёту. Менеджер выставит счёт, и вы сможете оплатить его
+                        удобным для вас способом. Также возможна онлайн через банк или наличными в наших отделах
+                        продаж.</p>
                 </div>
             </div>
 
@@ -579,7 +581,9 @@
                     <div class="support__action"><span></span><span></span></div>
                 </div>
                 <div class="support__answer">
-                    <p>Оптовым клиентам мы предлагаем выгодные условия сотрудничества, быстрый подбор деталей и минимальные сроки поставки. Для оформления оптового заказа свяжитесь с менеджером — он подберёт нужные позиции и предложит индивидуальные условия.</p>
+                    <p>Оптовым клиентам мы предлагаем выгодные условия сотрудничества, быстрый подбор деталей и
+                        минимальные сроки поставки. Для оформления оптового заказа свяжитесь с менеджером — он подберёт
+                        нужные позиции и предложит индивидуальные условия.</p>
                 </div>
             </div>
 
@@ -590,7 +594,8 @@
                 </div>
                 <div class="support__answer">
                     <p>Да, на все запчасти предоставляется гарантия качества.
-                        Мы работаем только с официальными поставщиками и проверенными брендами,  что исключает риск контрафакта и обеспечивает надёжность каждой детали.</p>
+                        Мы работаем только с официальными поставщиками и проверенными брендами, что исключает риск
+                        контрафакта и обеспечивает надёжность каждой детали.</p>
                 </div>
             </div>
 
@@ -598,6 +603,7 @@
     </section>
 
 </main>
+
 <script src="/src/main.js" type="module"></script>
 </body>
 </html>

@@ -9,6 +9,7 @@
   padding-block: fluid(58, 31);
   padding-inline: fluid(80, 36);
   gap: fluid(25, 18);
+  position: relative;
 
   &__heading {
     display: flex;
@@ -123,18 +124,15 @@
 
 .form-step {
   opacity: 0;
-  visibility: hidden;
-  transform: translateX(20px);
-  transition: all .35s ease;
+  pointer-events: none;
   position: absolute;
   width: 100%;
 }
 
 .form-step.active {
   opacity: 1;
-  visibility: visible;
-  transform: translateX(0);
   position: relative;
+  pointer-events: auto;
 }
 
 .hidden {
