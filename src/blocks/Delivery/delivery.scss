@@ -1,23 +1,38 @@
 @use '../../styles/helpers' as *;
 
 .delivery {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: fluid(30, 20);
-  background-color: var(--color-black-20);
-  border-radius: var(--border-radius-l);
-  height: fit-content;
-
-  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
-  margin-inline: var(--container-padding-x);
-  padding-bottom: var(--container-padding-x);
-
-  position: relative;
+  width: 100%;
   overflow: hidden;
 
   @include mobile {
     border-radius: var(--border-radius-m);
+  }
+
+  &--inner {
+    border-radius: var(--border-radius-l);
+    height: fit-content;
+    overflow: hidden;
+
+    @include mobile {
+      border-radius: var(--border-radius-m);
+    }
+  }
+
+  &--inner-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: fluid(30, 20);
+    background-color: var(--color-black-20);
+    padding-bottom: var(--container-padding-x);
+    border-radius: var(--border-radius-l);
+
+    position: relative;
+    overflow: hidden;
+
+    @include mobile {
+      border-radius: var(--border-radius-m);
+    }
   }
 
   &__steps {
@@ -34,6 +49,7 @@
     @include mobile {
       flex-direction: column;
       gap: rem(304);
+      border-radius: var(--border-radius-m);
     }
 
     @include mobile-s {
